@@ -77,7 +77,7 @@ public class Main {
 			EObject content = iterator.next();
 			if(content instanceof State) {
 				State state = (State) content;
-				if(state.getName().isEmpty()) {
+				if(state.getName() == null) { //state.getName().isEmpty()
 					while(nameVector.contains("test"+i)) {
 						i++;
 					}
